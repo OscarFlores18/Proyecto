@@ -1,20 +1,40 @@
-tabla += `
-    <tr>
-        <td>${r.id}</td>
-        <td>${r.patente}</td>
-        <td>${r.motor_rodaje}</td>
-        <td>${r.color}</td>
-        <td>
-            <button class="btn btn-warning"
-                onclick="cargarRodado(${r.id}, '${r.patente}', '${r.motor_rodaje}', '${r.color}')">
-                Editar
-            </button>
+function listarRodados() {
 
-            <button class="btn btn-danger"
-                data-id="${r.id}"
-                onclick="eliminarRodado(this)">
-                Eliminar
-            </button>
-        </td>
-    </tr>
-`;
+    $.ajax({
+        url: 'ListarRodados',
+        type: 'GET',
+        success: function(data) {
+
+            let tabla = "";
+
+            data.forEach(r => {
+                tabla += `
+                <tr>
+                    <td>${r.id}</td>
+                    <td>${r.patente}</td>
+                    <td>${r.motor_rodaje}</td>
+                    <td>${r.color}</td>
+                    <td>
+                        <button class="btn btn-warning"
+                            onclick="cargarRodado(${r.id}, '${r.patente}', '${r.motor_rodaje}', '${r.color}')">
+                            Editar
+                        </button>
+
+                        <button class="btn btn-danger"
+                            data-id="${r.id}"
+                            onclick="eliminarRodado(this)">
+                            Eliminar
+                        </button>
+                    </td>
+                </tr>
+                `;
+            });
+
+            $("#tablaRodados").html(tabla);
+        }
+    });
+}
+
+$(document).ready(function() {
+    listarRodados();
+});

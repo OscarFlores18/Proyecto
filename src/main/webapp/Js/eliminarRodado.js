@@ -1,7 +1,7 @@
 
 
 
-function myFunction(data){
+function eliminarRodado(data){
     
     value =  $(data).attr("data-id");
     
@@ -44,13 +44,6 @@ function myFunction(data){
       });
 }
 
-
-f
-
-
-
-
-
 function agregarPedibles(datos) {
         id =  $(datos).attr("data-id");
         
@@ -77,11 +70,6 @@ function agregarPedibles(datos) {
 $(document).ready(function () {
   
   //agregar listado por ajax
-
-
-
-
-
 
 
 });

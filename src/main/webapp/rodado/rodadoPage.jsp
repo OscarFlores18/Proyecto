@@ -9,12 +9,11 @@
 
 <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script src="<%=request.getContextPath()%>/scripts/jquery/jquery.min.js"></script>
-
-<script src="<%=request.getContextPath()%>/scripts/listarRodados.js"></script>
-<script src="<%=request.getContextPath()%>/scripts/agregarRodado.js"></script>
-<script src="<%=request.getContextPath()%>/scripts/eliminarRodado.js"></script>
+<script src="<%=request.getContextPath()%>/Js/listarRodados.js"></script>
+<script src="<%=request.getContextPath()%>/Js/agregarRodado.js"></script>
+<script src="<%=request.getContextPath()%>/Js/eliminarRodado.js"></script>
 
 <script>
     var contextPath = '<%=request.getContextPath()%>';
@@ -68,7 +67,7 @@
                 <input type="text" id="color" class="form-control"
                     placeholder="Color"><br>
 
-                <button class="btn btn-success" onclick="guardarRodado()">
+                <button class="btn btn-success"	 onclick="guardarRodado()">
                     Guardar
                 </button>
 
@@ -77,8 +76,6 @@
         </div>
     </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
 </body>

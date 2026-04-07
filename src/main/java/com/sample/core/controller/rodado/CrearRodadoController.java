@@ -21,7 +21,7 @@ public class CrearRodadoController extends HttpServlet {
         String patente = request.getParameter("patente");
         String motorRodaje = request.getParameter("motor_rodaje");
         String color = request.getParameter("color");
-
+        System.out.println("ENTRÓ AL SERVLET");
         Rodado r = new Rodado();
         r.setPatente(patente);
         r.setMotor_rodaje(motorRodaje);

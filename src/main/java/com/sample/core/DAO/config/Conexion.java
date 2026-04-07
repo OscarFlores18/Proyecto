@@ -10,7 +10,7 @@ public class Conexion {
     private static final Logger log = Logger.getLogger(Conexion.class.getName());
 
     private static final String HOST = "localhost";
-    private static final String URL = "jdbc:mysql://" + HOST + ":3306";
+    private static final String URL = "jdbc:mysql://localhost:3306/rodado";
     private static final String DBNAME = "concesionaria";
 
     private static final String TIMEZONE =
